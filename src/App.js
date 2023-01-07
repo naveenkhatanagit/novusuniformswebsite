@@ -3,15 +3,23 @@
 import './style.css'
 import HeaderComponent from './Components/Header/HeaderComponent';
 import FooterComponent from './Components/Footer/FooterComponent';
-import HomepageComponent from './Components/Homepage/HomepageComponent';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './Pages/Auth/LoginPage';
+import HomePage from './Pages/HomePage';
 
 function App() {
   return (
+    <Router>
     <div>
       <HeaderComponent/>
-      <HomepageComponent/>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/login' element={<LoginPage />} />
+        </Routes>
       <FooterComponent/>
     </div>
+    
+    </Router>
   );
 }
 

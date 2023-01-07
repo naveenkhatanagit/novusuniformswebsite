@@ -1,6 +1,25 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { useGetUserDetailsQuery } from '../../../app/services/auth/authService'
+import { setCredentials } from '../../../Features/auth/authSlice'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 function NavbarComponent() {
+
+    const { userInfo } = useSelector((state) => state.auth)
+    const dispatch = useDispatch()
+  
+    // automatically authenticate user if token is found
+    const { data, isFetching } = useGetUserDetailsQuery('userDetails', {
+      pollingInterval: 900000, // 15mins
+    })
+  
+    useEffect(() => {
+      if (data) dispatch(setCredentials(data.data))
+    }, [data, dispatch])
+   
+
   return (
     <div>
         <nav id="nav-main">
@@ -14,11 +33,14 @@ function NavbarComponent() {
         </div>
         <div className="nav-right">
 
-            <a className="nav-a" href="#">
-            <span>Hello. Sign in</span>
-            Accounts &amp; Lists
+            <NavLink className='nav-a' to='/login'>
+            {isFetching
+            ? `Fetching...`
+            : userInfo !== null
+            ? `Logged in as ${userInfo.name}`
+            : "Login"}
             <i className="fa fa-caret-down" aria-hidden="true"></i>
-            </a>
+            </NavLink>
 
             <a className="nav-a cart" href="#">
             <span>0</span>

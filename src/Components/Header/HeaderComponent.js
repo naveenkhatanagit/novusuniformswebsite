@@ -1,11 +1,13 @@
 import React from 'react'
-import FooterComponent from '../Footer/FooterComponent'
 import LogoComponent from './Childs/LogoComponent'
 import NavbarComponent from './Childs/NavbarComponent'
 import SearchComponent from './Childs/SearchComponent'
 
 
+
 function HeaderComponent() {
+
+      
   return (
     <div>
     <header>
