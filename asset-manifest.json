@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/novusuniformswebsite/static/css/main.8aa6539d.css",
-    "main.js": "/novusuniformswebsite/static/js/main.eddcf9af.js",
+    "main.css": "/novusuniformswebsite/static/css/main.7dcf3664.css",
+    "main.js": "/novusuniformswebsite/static/js/main.81ec39f0.js",
     "static/js/787.9485a86c.chunk.js": "/novusuniformswebsite/static/js/787.9485a86c.chunk.js",
     "static/media/banner.jpg": "/novusuniformswebsite/static/media/banner.9b2515634b29c72c20a5.jpg",
     "index.html": "/novusuniformswebsite/index.html",
-    "main.8aa6539d.css.map": "/novusuniformswebsite/static/css/main.8aa6539d.css.map",
-    "main.eddcf9af.js.map": "/novusuniformswebsite/static/js/main.eddcf9af.js.map",
+    "main.7dcf3664.css.map": "/novusuniformswebsite/static/css/main.7dcf3664.css.map",
+    "main.81ec39f0.js.map": "/novusuniformswebsite/static/js/main.81ec39f0.js.map",
     "787.9485a86c.chunk.js.map": "/novusuniformswebsite/static/js/787.9485a86c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8aa6539d.css",
-    "static/js/main.eddcf9af.js"
+    "static/css/main.7dcf3664.css",
+    "static/js/main.81ec39f0.js"
   ]
 }
