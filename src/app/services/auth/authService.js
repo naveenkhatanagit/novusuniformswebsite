@@ -20,7 +20,6 @@ export const authApi = createApi({
       query: () => ({
         url: '/customer/get_customer_details',
         method: 'GET',
-        mode: 'no-cors'
       }),
     }),
   }),

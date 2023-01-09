@@ -5,6 +5,7 @@ import { userLogin } from '../../Actions/authActions'
 import Error from '../../Components/Error'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const LoginPage = () => {

@@ -33,15 +33,13 @@ function NavbarComponent() {
         </div>
         <div className="nav-right">
 
-            <NavLink className='nav-a' to='/login'>
+            
             {isFetching
             ? `Fetching...`
             : userInfo !== null
-            ? `Logged in as ${userInfo.name}`
-            : "Login"}
-            <i className="fa fa-caret-down" aria-hidden="true"></i>
-            </NavLink>
-
+            ? <NavLink className='nav-a' to='/profile'>{userInfo.name}</NavLink> 
+            : <> <NavLink className='nav-a' to='/login'>Login</NavLink><NavLink className='nav-a' to='/register'>Register</NavLink></>}
+        
             <a className="nav-a cart" href="#">
             <span>0</span>
             Cart
